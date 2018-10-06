@@ -1,0 +1,39 @@
+<html>
+		<head>
+		<title>MY CONTACTS</title>
+		</head>
+		<body>
+		<table border = "1">
+			<tr
+>				<td>STT</td>
+				<td>Name</td>
+				<td>Phone Number</td>
+			<tr
+>			<tr
+>				<td>1</td>
+				<td>Duong</td>
+				<td>372009681</td>
+			<tr
+>			<tr
+>				<td>2</td>
+				<td>Long</td>
+				<td>984371734</td>
+			<tr
+>			<tr
+>				<td>3</td>
+				<td>Duong</td>
+				<td>368964324</td>
+			<tr
+>			<tr
+>				<td>4</td>
+				<td>Hiep</td>
+				<td>327729119</td>
+			<tr
+>			<tr
+>				<td>5</td>
+				<td>Duy</td>
+				<td>389397033</td>
+			<tr
+>		</tale>
+		</body>
+</html>
