@@ -1,0 +1,9 @@
+123	GiaiTich1	7
+ 124	GiaiTich2	7
+ 125	Logic    	9
+ 126	Triet1   	6
+ 127	Triet2   	8
+ 128	SCTDS    	6
+ 111	Boi   	10
+ 112	BongBan		8
+ 
