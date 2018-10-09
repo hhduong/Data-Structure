@@ -124,7 +124,7 @@ private:
 		}
 	};
 	// Tim phan tu
-	bool Seach(Node<T> *root, int value)
+	bool Seach(Node<T> *root, T value)
 	{
 		Node<T> *p = root;
 		while(p!=NULL)
@@ -207,6 +207,55 @@ private:
 		return Max;
 	};
 
+	// Tim vi tri node be nhat
+	Node<T>* findMin(Node<T> *root)
+    {
+        if(root == NULL)
+            return NULL;
+        else if(root->Left == NULL)
+            return root;
+        else
+            return findMin(root->Left);
+    };
+    // Tim vi tri node lon nhat
+    Node<T>* findMax(Node<T> *root)
+    {
+        if(root == NULL)
+            return NULL;
+        else if(root->right == NULL)
+            return root;
+        else
+            return findMax(root->right);
+    };
+
+    Node<T>* remove(int x, Node<T> *root)
+    {
+        Node<T> *temp;
+        if(root == NULL) //Neu cay rong
+            return NULL;
+        else if(x < root->data) // duyet sang nhanh trai
+            root->Left = remove(x, root->Left);
+        else if(x > root->data) // duyet sang nhanh phai
+            root->Right = remove(x, root->Right);
+        else if(root->Left && root->Right) // ca 2 node khac Null
+        {
+            temp = findMin(root->Right);
+            root->data = temp->data;
+            root->Right = remove(root->data, root->Right);
+        }
+        else
+        {
+            temp = root;
+            if(root->Left == NULL)
+                root = root->Right; // Neu node con trai bang null => Duyet sang phai cua cay va cap nhat moi lien ket
+            else if(root->Right == NULL)
+                root = root->Left;	// Neu node con phai bang null => Duyet sang trai cua cay va cap nhat moi lien ket
+            delete temp;
+        }
+
+        return root;
+    };
+
 public:
 	Tree()
 	{
@@ -281,6 +330,10 @@ public:
 	int Height()
 	{
 		return Height(root);
+	};
+	void remove(int x)
+	{
+		root = remove(x,root);
 	};
 };
 
