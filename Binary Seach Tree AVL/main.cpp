@@ -6,12 +6,12 @@ int main()
 {
 	
 	TreeAVL<int> t;
-	t.AddChild(30);
+	t.AddChild(87);
 	t.AddChild(5);
-    t.AddChild(35);
-    t.AddChild(32);
-    t.AddChild(40);
-    t.AddChild(45);
+    t.AddChild(52);
+    t.AddChild(92);
+    t.AddChild(12);
+    t.AddChild(24);
     t.Preorder();
 	return 0;
 }
